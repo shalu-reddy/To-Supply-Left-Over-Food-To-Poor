@@ -1,0 +1,6 @@
+trigger DropOffTrigger on Drop_Off_point__c (before insert) {
+    for(Drop_Off_point__c drop : Trigger.new) {
+        drop.Distance_c = drop.distance_calculation_c;
+        
+    }
+}
